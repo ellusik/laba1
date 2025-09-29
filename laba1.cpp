@@ -55,3 +55,24 @@ int main() {
             pipe_repair = false;
             cout << "Pipe added!\n";
         }
+
+        else if (choice == 2) {
+            cout << "Station name: ";
+            cin >> station_name;
+            
+            cout << "Total workshops: ";
+            cin >> station_workshops;
+            while (!checkNumber() || station_workshops <= 0) {
+                cout << "Error! Must be positive number: ";
+                cin >> station_workshops;
+            }
+            
+            cout << "Working workshops: ";
+            cin >> station_working;
+            while (!checkNumber() || station_working < 0 || station_working > station_workshops) {
+                cout << "Error! Working must be from 0 to " << station_workshops << ": ";
+                cin >> station_working;
+            }
+            
+            cout << "Station added!\n";
+        }
