@@ -55,7 +55,6 @@ int main() {
             pipe_repair = false;
             cout << "Pipe added!\n";
         }
-
         else if (choice == 2) {
             cout << "Station name: ";
             cin >> station_name;
@@ -76,7 +75,6 @@ int main() {
             
             cout << "Station added!\n";
         }
-
         else if (choice == 3) {
             if (pipe_name != "") {
                 cout << "PIPE: " << pipe_name << " " << pipe_length << "km " << pipe_diameter << "mm ";
@@ -91,7 +89,6 @@ int main() {
                 cout << "No station\n";
             }
         }
-
         else if (choice == 4) {
             if (pipe_name != "") {
                 pipe_repair = !pipe_repair;
@@ -100,7 +97,6 @@ int main() {
                 cout << "No pipe to edit!\n";
             }
         }
-
         else if (choice == 5) {
             if (station_name != "") {
                 cout << "1. Start workshop\n2. Stop workshop\nChoice: ";
@@ -135,3 +131,10 @@ int main() {
             cout << "Goodbye!\n";
             break;
         }
+        else {
+            cout << "Wrong choice! Use 1-6\n";
+        }
+    }
+    
+    return 0;
+}
