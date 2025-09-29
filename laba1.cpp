@@ -100,3 +100,38 @@ int main() {
                 cout << "No pipe to edit!\n";
             }
         }
+
+        else if (choice == 5) {
+            if (station_name != "") {
+                cout << "1. Start workshop\n2. Stop workshop\nChoice: ";
+                int c;
+                cin >> c;
+                if (!checkNumber()) continue;
+                
+                if (c == 1) {
+                    if (station_working < station_workshops) {
+                        station_working++;
+                        cout << "Workshop started. Now: " << station_working << endl;
+                    } else {
+                        cout << "All workshops already working!\n";
+                    }
+                }
+                else if (c == 2) {
+                    if (station_working > 0) {
+                        station_working--;
+                        cout << "Workshop stopped. Now: " << station_working << endl;
+                    } else {
+                        cout << "No workshops working!\n";
+                    }
+                }
+                else {
+                    cout << "Wrong choice!\n";
+                }
+            } else {
+                cout << "No station to edit!\n";
+            }
+        }
+        else if (choice == 6) {
+            cout << "Goodbye!\n";
+            break;
+        }
