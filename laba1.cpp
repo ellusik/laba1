@@ -76,3 +76,18 @@ int main() {
             
             cout << "Station added!\n";
         }
+
+        else if (choice == 3) {
+            if (pipe_name != "") {
+                cout << "PIPE: " << pipe_name << " " << pipe_length << "km " << pipe_diameter << "mm ";
+                cout << (pipe_repair ? "REPAIR" : "OK") << endl;
+            } else {
+                cout << "No pipe\n";
+            }
+            
+            if (station_name != "") {
+                cout << "STATION: " << station_name << " " << station_working << "/" << station_workshops << " working" << endl;
+            } else {
+                cout << "No station\n";
+            }
+        }
