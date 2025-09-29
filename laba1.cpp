@@ -91,3 +91,12 @@ int main() {
                 cout << "No station\n";
             }
         }
+
+        else if (choice == 4) {
+            if (pipe_name != "") {
+                pipe_repair = !pipe_repair;
+                cout << "Pipe repair: " << (pipe_repair ? "YES" : "NO") << endl;
+            } else {
+                cout << "No pipe to edit!\n";
+            }
+        }
